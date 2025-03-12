@@ -1,0 +1,79 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0A0A1E, #161642, #1F1F4D);
+    color: white;
+    text-align: center;
+}
+
+/* --- Encabezado --- */
+header {
+    padding: 50px;
+}
+
+.neon-text {
+    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
+    font-size: 3rem;
+    font-weight: bold;
+    color: #00FFFF; /* Azul cian neón */
+    text-shadow: 0 0 5px #00FFFF, 0 0 10px #0099FF, 0 0 20px #0077FF, 0 0 40px #0055FF;
+    animation: pulseNeon 1.5s infinite alternate;
+}
+@keyframes pulseNeon {
+    0% { text-shadow: 0 0 5px #00FFFF, 0 0 10px #0099FF, 0 0 20px #0077FF; }
+    100% { text-shadow: 0 0 10px #00FFFF, 0 0 20px #0099FF, 0 0 40px #0077FF; }
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #00FFFF;
+}
+
+/* --- Secciones --- */
+section {
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* --- Habilidades --- */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #00FFFF;
+    color: #0A0A1E;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00FFFF;
+}
+
+/* --- Contacto --- */
+#contacto a {
+    color: #00FFFF;
+    font-weight: bold;
+}
+
+/* --- Footer --- */
+footer {
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    padding: 15px;
+    margin-top: 30px;
+}
