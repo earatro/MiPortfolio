@@ -26,3 +26,25 @@ function typeWriter() {
 }
 typeWriter();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cursor = document.querySelector(".cursor");
+
+    // Movimiento del cursor
+    document.addEventListener("mousemove", (e) => {
+        cursor.style.left = `${e.clientX}px`;
+        cursor.style.top = `${e.clientY}px`;
+    });
+
+    // Detectar cuándo el cursor está sobre un botón o enlace
+    const botones = document.querySelectorAll("button, .btn-iniciar, a");
+
+    botones.forEach((boton) => {
+        boton.addEventListener("mouseenter", () => {
+            cursor.classList.add("cursor-hover");
+        });
+        boton.addEventListener("mouseleave", () => {
+            cursor.classList.remove("cursor-hover");
+        });
+    });
+});
