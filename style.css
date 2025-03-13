@@ -1,6 +1,6 @@
 /* --- Estilos Generales --- */
-body {
-    font-family: 'Poppins', sans-serif;
+body{
+    font-family: 'Orbitron', sans-serif;
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #0A0A1E, #161642, #1F1F4D);
@@ -8,22 +8,16 @@ body {
     text-align: center;
 }
 
-/* --- Encabezado --- */
-header {
+header{
+
     padding: 50px;
 }
 
 .neon-text {
-    font-family: 'Orbitron', sans-serif; /* Fuente futurista */
     font-size: 3rem;
     font-weight: bold;
-    color: #00FFFF; /* Azul cian neón */
-    text-shadow: 0 0 5px #00FFFF, 0 0 10px #0099FF, 0 0 20px #0077FF, 0 0 40px #0055FF;
-    animation: pulseNeon 1.5s infinite alternate;
-}
-@keyframes pulseNeon {
-    0% { text-shadow: 0 0 5px #00FFFF, 0 0 10px #0099FF, 0 0 20px #0077FF; }
-    100% { text-shadow: 0 0 10px #00FFFF, 0 0 20px #0099FF, 0 0 40px #0077FF; }
+    color: #4F7FFF;
+    text-shadow: 0 0 8px #4F7FFF, 0 0 16px #00FFFF;
 }
 
 .subtitulo {
@@ -31,8 +25,33 @@ header {
     color: #00FFFF;
 }
 
+h1{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h1 span{
+    color: #ffe600;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #ffe600;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+}
+
 /* --- Secciones --- */
-section {
+section{
     padding: 60px 20px;
     background: rgba(255, 255, 255, 0.1);
     margin: 20px auto;
@@ -42,7 +61,7 @@ section {
 }
 
 /* --- Habilidades --- */
-.skills {
+.skills{
     display: flex;
     justify-content: center;
     gap: 15px;
@@ -50,30 +69,111 @@ section {
     margin-top: 20px;
 }
 
-.skill {
-    background: #00FFFF;
-    color: #0A0A1E;
+.skill{
+    background: #ffe600;
+    color: #333;
     padding: 10px 15px;
     border-radius: 10px;
     font-weight: bold;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.skill:hover {
+.skill:hover{
     transform: scale(1.1);
-    box-shadow: 0 0 10px #00FFFF;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 /* --- Contacto --- */
 #contacto a {
-    color: #00FFFF;
+    color: #ffe600;
     font-weight: bold;
 }
 
 /* --- Footer --- */
-footer {
-    background: rgba(255, 255, 255, 0.1);
+footer{
+    background: rgba(0, 0, 0, 0.3);
     font-size: 0.9rem;
     padding: 15px;
     margin-top: 30px;
 }
+
+/* ---Fondo partículas--- */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #0D0D21 20%, #1A1A40 60%, #240046 100%);
+    z-index: -1;
+}
+
+/* ---Contenedor Inicio--- */
+.inicio-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color:  #00FFFF;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.inicio-container h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.inicio-container p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* --- Efecto Nombre--- */
+.neon-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;
+    animation: glitch 0.5s infinite alternate;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 2px 0px #00FFFF, -2px -2px 0px #9C27B0; }
+    25% { text-shadow: -2px -2px 0px #00FFFF, 2px 2px 0px #9C27B0; }
+    50% { text-shadow: 4px -2px 0px #00FFFF, -4px 2px 0px #9C27B0; }
+    75% { text-shadow: -2px 4px 0px #00FFFF, 2px -4px 0px #9C27B0; }
+    100% { text-shadow: 2px -2px 0px #00FFFF, -2px 2px 0px #9C27B0; }
+}
+
+/* ---Botón inicio--- */
+.btn-iniciar {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #00FFFF; /* Color del texto en cian neón */
+    background: transparent;
+    border: 2px solid #00FFFF; /* Borde neón */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-iniciar:hover {
+    background: #00FFFF;
+    color: #0A0A1E;
+    box-shadow: 0 0 15px #00FFFF, 0 0 30px #00FFFF;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
