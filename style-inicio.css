@@ -92,7 +92,7 @@ body{
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    transition: transform 0.1s, background 0.2s, border-radius 0.2s, box-shadow 0.2s;
+    transition: width 0.15s, height 0.15s, border 0.2s, border-radius 0.2s, box-shadow 0.2s;
     z-index: 10000;
 }
 
@@ -107,5 +107,36 @@ button:hover ~ .cursor,
     transform: scale(1.8);
     background: #00FFFF;
     border-color: #0099FF;
-    box-shadow: 0 0 10px #00FFFF
+    box-shadow: 0 0 10px #00FFFF;
+}
+/* Cursor cuadrado */
+.cursor-hover {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    border: 2px solid #9C27B0;
+    background: transparent;
+    box-shadow: 0 0 10px #9C27B0, 0 0 20px #7A00B0;
+}
+/* ---Cursor Habilidades--- */
+.cursor-skill {
+    position: fixed;
+    width: 0;
+    height: 0;
+    background: transparent;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 10000;
+}
+
+.cursor-skill::before {
+    content: "";
+    position: absolute;
+    background: transparent;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid #FF00FF;
+    filter: drop-shadow(0 0 5px #FF00FF) drop-shadow(0 0 10px #D400D4);
 }

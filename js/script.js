@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Detectar cuándo el cursor está sobre un botón o enlace
-    const botones = document.querySelectorAll("button, .btn-iniciar, a");
+    const botones = document.querySelectorAll("button, .btn-iniciar, a, .skill");
 
     botones.forEach((boton) => {
         boton.addEventListener("mouseenter", () => {
@@ -48,3 +48,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
